@@ -1,0 +1,14 @@
+﻿<Controls:MetroWindow x:Class="EasyWIFI.About"
+                      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                      xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+                      Title="About EasyWIFI" TitleCaps="False" Name="WindowAbout"
+                      ShowSystemMenuOnRightClick="False"
+                      WindowStartupLocation="CenterScreen" Topmost="True"
+                      Height="250" Width="280" ResizeMode="NoResize"
+                      ShowCloseButton="False" ShowInTaskbar="False"
+                      BorderBrush="{DynamicResource AccentColorBrush}">
+    <Grid>
+        
+    </Grid>
+</Controls:MetroWindow>

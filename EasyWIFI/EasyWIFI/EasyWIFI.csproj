@@ -1,0 +1,214 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5A4AC6B6-F1A2-42DE-8B67-564977EEE5C0}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EasyWIFI</RootNamespace>
+    <AssemblyName>EasyWIFI</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Hardcodet.Wpf.TaskbarNotification">
+      <HintPath>..\packages\Hardcodet.NotifyIcon.Wpf.1.0.5\lib\net45\Hardcodet.Wpf.TaskbarNotification.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="MahApps.Metro">
+      <HintPath>..\packages\MahApps.Metro.1.1.2.0\lib\net45\MahApps.Metro.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Remoting" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Windows.Interactivity">
+      <HintPath>..\packages\MahApps.Metro.1.1.2.0\lib\net45\System.Windows.Interactivity.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Resources\Lib\Host\ConnectedPeer.cs" />
+    <Compile Include="Resources\Lib\Host\ConnectionSettings.cs" />
+    <Compile Include="Resources\Lib\Host\IEasyWIFIHost.cs" />
+    <Compile Include="Resources\Lib\Host\EasyWIFIHost.cs" />
+    <Compile Include="Resources\Lib\Host\SharableConnection.cs" />
+    <Compile Include="Resources\Lib\ICS\IcsConnection.cs" />
+    <Compile Include="Resources\Lib\ICS\IcsConnectionStatus.cs" />
+    <Compile Include="Resources\Lib\ICS\IcsManager.cs" />
+    <Compile Include="Resources\Lib\WLAN\WinAPI\DOT11_AUTH_ALGORITHM.cs" />
+    <Compile Include="Resources\Lib\WLAN\WinAPI\DOT11_BSSID_LIST.cs" />
+    <Compile Include="Resources\Lib\WLAN\WinAPI\DOT11_BSS_TYPE.cs" />
+    <Compile Include="Resources\Lib\WLAN\WinAPI\DOT11_CIPHER_ALGORITHM.cs" />
+    <Compile Include="Resources\Lib\WLAN\WinAPI\DOT11_MAC_ADDRESS.cs" />
+    <Compile Include="Resources\Lib\WLAN\WinAPI\DOT11_PHY_TYPE.cs" />
+    <Compile Include="Resources\Lib\WLAN\WinAPI\DOT11_RADIO_STATE.cs" />
+    <Compile Include="Resources\Lib\WLAN\WinAPI\DOT11_SSID.cs" />
+    <Compile Include="Resources\Lib\WLAN\WinAPI\NDIS_OBJECT_HEADER.cs" />
+    <Compile Include="Resources\Lib\WLAN\WinAPI\wlanapi.cs" />
+    <Compile Include="Resources\Lib\WLAN\WinAPI\WLAN_ASSOCIATION_ATTRIBUTES.cs" />
+    <Compile Include="Resources\Lib\WLAN\WinAPI\WLAN_AVAILABLE_NETWORK.cs" />
+    <Compile Include="Resources\Lib\WLAN\WinAPI\WLAN_AVAILABLE_NETWORK_LIST.cs" />
+    <Compile Include="Resources\Lib\WLAN\WinAPI\WLAN_CONNECTION_ATTRIBUTES.cs" />
+    <Compile Include="Resources\Lib\WLAN\WinAPI\WLAN_CONNECTION_MODE.cs" />
+    <Compile Include="Resources\Lib\WLAN\WinAPI\WLAN_CONNECTION_PARAMETERS.cs" />
+    <Compile Include="Resources\Lib\WLAN\WinAPI\WLAN_HOSTED_NETWORK_CONNECTION_SETTINGS.cs" />
+    <Compile Include="Resources\Lib\WLAN\WinAPI\WLAN_HOSTED_NETWORK_DATA_PEER_STATE_CHANGE.cs" />
+    <Compile Include="Resources\Lib\WLAN\WinAPI\WLAN_HOSTED_NETWORK_NOTIFICATION_CODE.cs" />
+    <Compile Include="Resources\Lib\WLAN\WinAPI\WLAN_HOSTED_NETWORK_OPCODE.cs" />
+    <Compile Include="Resources\Lib\WLAN\WinAPI\WLAN_HOSTED_NETWORK_PEER_AUTH_STATE.cs" />
+    <Compile Include="Resources\Lib\WLAN\WinAPI\WLAN_HOSTED_NETWORK_PEER_STATE.cs" />
+    <Compile Include="Resources\Lib\WLAN\WinAPI\WLAN_HOSTED_NETWORK_RADIO_STATE.cs" />
+    <Compile Include="Resources\Lib\WLAN\WinAPI\WLAN_HOSTED_NETWORK_REASON.cs" />
+    <Compile Include="Resources\Lib\WLAN\WinAPI\WLAN_HOSTED_NETWORK_SECURITY_SETTINGS.cs" />
+    <Compile Include="Resources\Lib\WLAN\WinAPI\WLAN_HOSTED_NETWORK_STATE.cs" />
+    <Compile Include="Resources\Lib\WLAN\WinAPI\WLAN_HOSTED_NETWORK_STATE_CHANGE.cs" />
+    <Compile Include="Resources\Lib\WLAN\WinAPI\WLAN_HOSTED_NETWORK_STATUS.cs" />
+    <Compile Include="Resources\Lib\WLAN\WinAPI\WLAN_INTERFACE_INFO.cs" />
+    <Compile Include="Resources\Lib\WLAN\WinAPI\WLAN_INTERFACE_INFO_LIST.cs" />
+    <Compile Include="Resources\Lib\WLAN\WinAPI\WLAN_INTERFACE_STATE.cs" />
+    <Compile Include="Resources\Lib\WLAN\WinAPI\WLAN_INTF_OPCODE.cs" />
+    <Compile Include="Resources\Lib\WLAN\WinAPI\WLAN_NOTIFICATION_CODE_ACM.cs" />
+    <Compile Include="Resources\Lib\WLAN\WinAPI\WLAN_NOTIFICATION_CODE_MSN.cs" />
+    <Compile Include="Resources\Lib\WLAN\WinAPI\WLAN_NOTIFICATION_DATA.cs" />
+    <Compile Include="Resources\Lib\WLAN\WinAPI\WLAN_NOTIFICATION_SOURCE.cs" />
+    <Compile Include="Resources\Lib\WLAN\WinAPI\WLAN_OPCODE_VALUE_TYPE.cs" />
+    <Compile Include="Resources\Lib\WLAN\WinAPI\WLAN_PROFILE_INFO.cs" />
+    <Compile Include="Resources\Lib\WLAN\WinAPI\WLAN_PROFILE_INFO_LIST.cs" />
+    <Compile Include="Resources\Lib\WLAN\WinAPI\WLAN_SECURITY_ATTRIBUTES.cs" />
+    <Compile Include="Resources\Lib\WLAN\WlanManager.cs" />
+    <Compile Include="Resources\Lib\WLAN\WlanStation.cs" />
+    <Compile Include="Resources\Lib\WLAN\WlanUtils.cs" />
+    <Compile Include="Resources\SingleInstance.cs" />
+    <Compile Include="Resources\ViewModelBase.cs" />
+    <Compile Include="View\About.xaml.cs">
+      <DependentUpon>About.xaml</DependentUpon>
+    </Compile>
+    <Page Include="View\MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ViewModel\AppViewModel.cs" />
+    <Compile Include="Resources\DelegateCommand.cs" />
+    <Compile Include="View\MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="View\NotifyIcon.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resources\Theme.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resources\Theme.Accent.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\About.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ViewModel\MainWindowViewModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="NETCONLib">
+      <Guid>{43E734CA-043D-4A70-9A2C-A8F254063D91}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <Private>False</Private>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icons\A2D.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icons\active.ico" />
+    <Resource Include="Resources\Icons\inactive.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
