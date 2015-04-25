@@ -8,9 +8,9 @@ using System.Windows;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("EasyWIFI")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("EasyWIFI is a free software that creates a virtual wifi hotspot on your PC and share internet with all devices.")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("A2D Interface")]
 [assembly: AssemblyProduct("EasyWIFI")]
 [assembly: AssemblyCopyright("Copyright © Dyar Perdana 2015")]
 [assembly: AssemblyTrademark("")]

@@ -5,7 +5,8 @@
              ShutdownMode="OnExplicitShutdown">
     <Application.Resources>
         <ResourceDictionary>
-            <Image x:Key="AppIcon" Source="pack://application:,,,/Resources/Icons/A2D.png" />
+            <Image x:Key="AppIconMono" Source="pack://application:,,,/Resources/Icons/A2D.png" />
+            <BitmapImage x:Key="AppIcon" UriSource="pack://application:,,,/Resources/Icons/A2D Flat.png" />
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Colors.xaml" />
                 <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Controls.xaml" />
